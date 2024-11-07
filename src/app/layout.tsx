@@ -8,7 +8,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "SuperTracker",
+  title: {
+    default: "SuperTracker",
+    template: "%s | SuperTracker",
+  },
   description: "Easiest way to organize your tasks",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

@@ -2,7 +2,7 @@ import { type Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Dashboard | SuperTracker",
+  title: "Dashboard",
   description: "Overview of your tasks and productivity",
 };
 

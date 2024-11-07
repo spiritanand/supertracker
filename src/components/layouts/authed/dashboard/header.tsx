@@ -25,7 +25,7 @@ export default function Header({ session }: { session: Session }) {
           <span className="text-sm font-medium">{session.user.name}</span>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         <Link
           href="/dashboard/tasks/open"
           className={`relative overflow-hidden rounded-xl transition-all duration-300 ${
