@@ -13,7 +13,7 @@ export default function Component() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="absolute left-1/4 top-1/4"
+        className="absolute left-32 top-1/4"
       >
         <Star className="h-8 w-8 text-violet-500" />
       </motion.div>
@@ -33,10 +33,10 @@ export default function Component() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 text-center"
       >
-        <h1 className="animate-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-[length:400%_400%] bg-clip-text text-4xl font-bold text-transparent sm:text-6xl md:text-7xl">
+        <h1 className="animate-gradient bg-gradient-to-r from-yellow-500 via-amber-300 to-yellow-300 bg-[length:400%_400%] bg-clip-text text-4xl font-bold text-transparent sm:text-6xl md:text-7xl">
           Easiest way to
         </h1>
-        <h1 className="animate-gradient mt-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-[length:400%_400%] bg-clip-text text-4xl font-bold text-transparent sm:text-6xl md:text-7xl">
+        <h1 className="animate-gradient mt-2 bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-[length:400%_400%] bg-clip-text text-4xl font-bold text-transparent sm:text-6xl md:text-7xl">
           organize your tasks
         </h1>
         <motion.p
