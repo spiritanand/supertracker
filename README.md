@@ -1,29 +1,85 @@
-# Create T3 App
+# SuperTracker
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## Easiest way to organize your tasks
 
-## What's next? How do I make an app with this?
+A modern, keyboard-first task management application built with the T3 Stack.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+![Preview](./public/preview.png)
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Tech Stack
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- ⚡ [Next.js 15](https://nextjs.org) with App Router for the framework
+- 🔐 [NextAuth.js](https://authjs.dev) for authentication
+- 🎨 [Tailwind CSS](https://tailwindcss.com) for styling
+- 🔤 [Geist Mono](https://vercel.com/font) for typography
+- 📊 [Drizzle](https://orm.drizzle.team) for database ORM
+- 🎯 [Shadcn UI](https://ui.shadcn.com/) for UI components
+- 📋 [TanStack Table](https://tanstack.com/table) for table management
+- 🎨 [Framer Motion](https://www.framer.com/motion/) for animations
+- 📦 [Lucide](https://lucide.dev/) for icons
+- 🚀 [Vercel](https://vercel.com) for hosting
 
-## Learn More
+## Core Features
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### Task Management
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- [x] Three-tab system for task organization:
+  - Open
+  - In Progress
+  - Closed
+- [x] Task listing in data tables with columns for:
+  - Name
+  - Priority
+  - Created date
+  - Due date
+  - Assignee
+  - Labels
+  - Status
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Keyboard Navigation
 
-## How do I deploy this?
+- [x] Arrow key (↑↓) navigation through task rows
+- [x] Enter key to open task details
+- [x] Left/Right (←→) arrow navigation in focus mode
+- [x] Numeric shortcuts (1,2,3) for status changes
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Task Details Modal
+
+- [x] Detailed task information view
+- [x] Comment system
+  - [x] Add new comments
+  - [x] View comment history
+- [x] Status management
+  - [x] Status change dropdown
+  - [x] Confirmation modal for status changes
+- [x] Real-time updates without breaking modal navigation
+
+### Enhanced Features
+
+- [x] Filtering system
+  - [x] Filter by name
+- [x] Multiple sorting options
+  - [x] Creation date
+  - [x] Due date
+
+### Future Features
+
+- [ ] Advanced filtering system
+  - [ ] Multiple filter combinations
+  - [ ] Save custom filters
+- [ ] Global search functionality
+- [ ] Showing and maintaining counts in tabs
+- [ ] Having the option to take action on any row from the table itself.
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Copy `.env.example` to `.env` and fill in your environment variables
+4. Run the development server:
+   ```bash
+   pnpm dev
+   ```
