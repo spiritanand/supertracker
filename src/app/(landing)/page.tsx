@@ -7,7 +7,7 @@ import { signIn } from "next-auth/react";
 
 export default function Component() {
   return (
-    <main className="container relative mx-auto flex min-h-[70vh] flex-col items-center justify-center overflow-hidden">
+    <main className="container relative z-10 mx-auto flex min-h-[70vh] flex-col items-center justify-center overflow-hidden">
       {/* Animated SVG elements */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}

@@ -64,6 +64,7 @@ A modern, keyboard-first task management application built with the T3 Stack.
 
 ### Future Features
 
+- [ ] Loading with infinite pagination
 - [ ] Advanced filtering system
   - [ ] Multiple filter combinations
   - [ ] Save custom filters
