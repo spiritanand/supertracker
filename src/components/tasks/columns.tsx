@@ -67,7 +67,9 @@ export const columns: ColumnDef<Task>[] = [
       return typeof assignee === "string" ? (
         <div className="flex items-center gap-2">
           <Avatar>
-            <AvatarFallback>{assignee.slice(0, 2)}</AvatarFallback>
+            <AvatarFallback>
+              {assignee.slice(0, 2).toUpperCase()}
+            </AvatarFallback>
           </Avatar>
           <p>{assignee}</p>
         </div>
