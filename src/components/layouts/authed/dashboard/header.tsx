@@ -30,13 +30,13 @@ export default function Header({ session }: { session: Session }) {
           href="/dashboard/tasks/open"
           className={`relative overflow-hidden rounded-xl transition-all duration-300 ${
             activePath === "/dashboard/tasks/open"
-              ? "bg-green-500/20 text-green-400 hover:bg-green-500/30"
-              : "bg-gray-800/50 text-gray-300 hover:bg-green-500/10"
+              ? "bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30"
+              : "bg-gray-800/50 text-gray-300 hover:bg-yellow-500/10"
           }`}
         >
-          <span className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 opacity-0 transition-opacity duration-300 group-hover:opacity-20"></span>
+          <span className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 opacity-0 transition-opacity duration-300 group-hover:opacity-20"></span>
           <div className="group flex items-center justify-center p-4">
-            <span className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-900/50 text-green-300 shadow-lg shadow-green-500/50 ring-2 ring-green-500 ring-offset-2 ring-offset-green-900 transition-all duration-300 group-hover:scale-110">
+            <span className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-yellow-900/50 text-yellow-300 shadow-lg shadow-yellow-500/50 ring-2 ring-yellow-500 ring-offset-2 ring-offset-yellow-900 transition-all duration-300 group-hover:scale-110">
               <span className="text-lg font-bold">1</span>
             </span>
             <span className="relative z-10 text-sm font-medium">Open</span>
@@ -46,15 +46,15 @@ export default function Header({ session }: { session: Session }) {
           href="/dashboard/tasks/in-progress"
           className={`relative overflow-hidden rounded-xl transition-all duration-300 ${
             activePath === "/dashboard/tasks/in-progress"
-              ? "bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30"
-              : "bg-gray-800/50 text-gray-300 hover:bg-yellow-500/10"
+              ? "bg-green-500/20 text-green-400 hover:bg-green-500/30"
+              : "bg-gray-800/50 text-gray-300 hover:bg-green-500/10"
           }`}
         >
-          <span className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 opacity-0 transition-opacity duration-300 group-hover:opacity-20"></span>
+          <span className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 opacity-0 transition-opacity duration-300 group-hover:opacity-20"></span>
           <div className="group flex items-center justify-center p-4">
-            <span className="relative mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-yellow-900/50 text-yellow-300 shadow-lg shadow-yellow-500/50 transition-all duration-300 group-hover:scale-110">
+            <span className="relative mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-900/50 text-green-300 shadow-lg shadow-green-500/50 transition-all duration-300 group-hover:scale-110">
               <span className="text-lg font-bold">2</span>
-              <span className="absolute inset-0 animate-ping rounded-full border-2 border-yellow-400"></span>
+              <span className="absolute -left-4 animate-ping rounded-full border-2 border-green-400"></span>
             </span>
             <span className="relative z-10 text-sm font-medium">
               In Progress

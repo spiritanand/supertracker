@@ -5,7 +5,7 @@ import { Badge, type BadgeProps } from "~/components/ui/badge";
 import { type Task } from "~/types";
 import { format, isDate } from "date-fns";
 import { Avatar, AvatarFallback } from "../ui/avatar";
-import { Priority } from "~/lib/constants";
+import { Priority, Status } from "~/lib/constants";
 
 export const columns: ColumnDef<Task>[] = [
   {
@@ -20,7 +20,7 @@ export const columns: ColumnDef<Task>[] = [
 
       const badgeVariantMap: Record<Priority, BadgeProps["variant"]> = {
         [Priority.High]: "destructive",
-        [Priority.Medium]: "default",
+        [Priority.Medium]: "info",
         [Priority.Low]: "secondary",
       } as const;
 
@@ -98,5 +98,22 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "status",
     header: "Status",
+    cell: ({ row }) => {
+      const status = row.getValue("status");
+
+      const statusVariantMap: Record<Status, BadgeProps["variant"]> = {
+        [Status.Open]: "warning",
+        [Status.InProgress]: "success",
+        [Status.Closed]: "destructive",
+      } as const;
+
+      if (typeof status !== "string" || !(status in statusVariantMap)) {
+        return null;
+      }
+
+      return (
+        <Badge variant={statusVariantMap[status as Status]}>{status}</Badge>
+      );
+    },
   },
 ];
