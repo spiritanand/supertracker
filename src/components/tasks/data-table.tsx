@@ -2,8 +2,10 @@
 
 import {
   type ColumnDef,
+  ColumnFiltersState,
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   getSortedRowModel,
   type SortingState,
   useReactTable,
@@ -20,6 +22,7 @@ import {
 import { type Comment, type Task } from "~/types";
 import { TaskModal } from "./task-modal";
 import { type Status } from "~/lib/constants";
+import { Input } from "../ui/input";
 
 interface DataTableProps {
   columns: ColumnDef<Task>[];
@@ -31,6 +34,7 @@ export function DataTable({ columns, data }: DataTableProps) {
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const [localData, setLocalData] = useState(data);
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
 
   const table = useReactTable({
     data: localData,
@@ -40,8 +44,11 @@ export function DataTable({ columns, data }: DataTableProps) {
     getRowId: (row) => row.id,
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
+    onColumnFiltersChange: setColumnFilters,
+    getFilteredRowModel: getFilteredRowModel(),
     state: {
       sorting,
+      columnFilters,
     },
   });
 
@@ -139,6 +146,17 @@ export function DataTable({ columns, data }: DataTableProps) {
 
   return (
     <>
+      <div className="flex items-center py-4">
+        <Input
+          placeholder="Filter name..."
+          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+          onChange={(event) =>
+            table.getColumn("name")?.setFilterValue(event.target.value)
+          }
+          className="max-w-sm"
+        />
+      </div>
+
       <div className="rounded-lg border">
         <Table>
           <TableHeader>
