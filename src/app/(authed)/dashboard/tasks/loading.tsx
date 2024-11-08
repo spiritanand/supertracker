@@ -3,10 +3,15 @@ import { Skeleton } from "~/components/ui/skeleton";
 export default function TasksLoading() {
   return (
     <div className="container mx-auto space-y-6 px-6 py-10 md:px-0">
+      {/* Input Skeleton */}
+      <div className="w-[300px] rounded-md border">
+        <Skeleton className="h-10 w-[300px]" />
+      </div>
+
       {/* Table skeleton */}
       <div className="rounded-md border">
         {/* Table header */}
-        <div className="border-b bg-slate-50/50 p-4">
+        <div className="rounded-t-md border-b bg-slate-50/50 p-4">
           <div className="flex space-x-4">
             {[300, 100, 120, 120, 120, 150, 100].map((width, i) => (
               <Skeleton key={i} className={`h-4 w-[${width}px]`} />
