@@ -140,7 +140,6 @@ export function TaskModal({
       // Handle modal keyboard shortcuts
       if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
         e.preventDefault();
-        console.log("arrow key pressed");
         handleNavigate(e.key === "ArrowLeft" ? -1 : 1);
       }
 

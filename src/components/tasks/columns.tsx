@@ -6,6 +6,8 @@ import { type Task } from "~/types";
 import { format, isDate } from "date-fns";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { Priority, Status } from "~/lib/constants";
+import { Button } from "../ui/button";
+import { ArrowUpDown } from "lucide-react";
 
 export const columns: ColumnDef<Task>[] = [
   {
@@ -37,7 +39,17 @@ export const columns: ColumnDef<Task>[] = [
   },
   {
     accessorKey: "created",
-    header: "Created",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Created
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
     cell: ({ row }) => {
       const created = row.getValue("created");
       return isDate(created) ? (
@@ -49,7 +61,17 @@ export const columns: ColumnDef<Task>[] = [
   },
   {
     accessorKey: "dueDate",
-    header: "Due Date",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Due Date
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
     cell: ({ row }) => {
       const dueDate = row.getValue("dueDate");
       return isDate(dueDate) ? (
