@@ -57,9 +57,9 @@ export function TaskModal({
     if (pendingStatus && task) {
       await onStatusChange(task.id, pendingStatus);
       setIsConfirmOpen(false);
-      setIsModalOpen(false);
+      //   setIsModalOpen(false);
     }
-  }, [pendingStatus, task, onStatusChange, setIsConfirmOpen, setIsModalOpen]);
+  }, [pendingStatus, task, onStatusChange, setIsConfirmOpen]);
 
   const handleStatusChange = async (newStatus: Status) => {
     setPendingStatus(newStatus);

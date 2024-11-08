@@ -95,8 +95,11 @@ export function DataTable({ columns, data }: DataTableProps) {
     // Set the next task in focus
     if (updatedData.length > 0) {
       const rows = table.getRowModel().rows;
-      // modulo to wrap around to beginning if needed
-      rows[(currentIndex + 1) % updatedData.length]?.toggleSelected(true);
+      const nextIndex =
+        currentIndex + 1 >= updatedData.length ? 0 : currentIndex + 1;
+      const nextTask = rows[nextIndex];
+      nextTask?.toggleSelected(true);
+      setSelectedTask(nextTask?.original ?? null);
     } else {
       setSelectedTask(null);
       setIsModalOpen(false);
