@@ -52,7 +52,7 @@ export default function Header({ session }: { session: Session }) {
         >
           <span className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 opacity-0 transition-opacity duration-300 group-hover:opacity-20"></span>
           <div className="group flex items-center justify-center p-4">
-            <span className="relative mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-900/50 text-green-300 shadow-lg shadow-green-500/50 ring-green-500 ring-offset-2 ring-offset-green-900 ring-2 transition-all duration-300 group-hover:scale-110">
+            <span className="relative mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-green-900/50 text-green-300 shadow-lg shadow-green-500/50 ring-2 ring-green-500 ring-offset-2 ring-offset-green-900 transition-all duration-300 group-hover:scale-110">
               <span className="text-lg font-bold">2</span>
               <span className="absolute -left-4 animate-ping rounded-full border-2 border-green-400"></span>
             </span>

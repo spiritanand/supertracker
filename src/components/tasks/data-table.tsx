@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components/ui/table";
-import { type Task } from "~/types";
+import { type Comment, type Task } from "~/types";
 import { TaskModal } from "./task-modal";
 import { type Status } from "~/lib/constants";
 
@@ -62,7 +62,8 @@ export function DataTable({ columns, data }: DataTableProps) {
 
       if (event.key === "ArrowUp") {
         event.preventDefault();
-        const prevIndex = (currentIndex - 1 + rows.length) % rows.length;
+        const prevIndex =
+          currentIndex <= 0 ? rows.length - 1 : currentIndex - 1;
         rows[prevIndex]?.toggleSelected(true);
       }
 
@@ -73,6 +74,23 @@ export function DataTable({ columns, data }: DataTableProps) {
     },
     [table, handleRowAction, isModalOpen],
   );
+
+  const handleAddComment = async (taskId: string, comment: Comment) => {
+    setLocalData((prev) =>
+      prev.map((task) =>
+        task.id === taskId
+          ? { ...task, comments: [...task.comments, comment] }
+          : task,
+      ),
+    );
+    setSelectedTask((prev) =>
+      prev?.id === taskId
+        ? { ...prev, comments: [...prev.comments, comment] }
+        : prev,
+    );
+    // TODO: Implement API call to add comment to task
+    console.log("Adding comment to task:", taskId, comment);
+  };
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
@@ -174,6 +192,7 @@ export function DataTable({ columns, data }: DataTableProps) {
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
         onStatusChange={handleStatusChange}
+        onAddComment={handleAddComment}
         table={table}
         setSelectedTask={setSelectedTask}
       />

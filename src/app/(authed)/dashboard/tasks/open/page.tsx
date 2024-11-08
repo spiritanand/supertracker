@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 };
 
 async function getData(): Promise<Task[]> {
-  // Fetch data from your API here.
+  // Simulate a slow API call
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return tasks.filter((task) => task.status === Status.Open);
 }
 

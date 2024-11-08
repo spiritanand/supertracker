@@ -1,5 +1,12 @@
 import { type Status, type Priority } from "~/lib/constants";
 
+export interface Comment {
+  id: string;
+  content: string;
+  author: string;
+  created: Date;
+}
+
 export interface Task {
   id: string;
   priority: Priority;
@@ -9,4 +16,5 @@ export interface Task {
   dueDate: Date;
   created: Date;
   assignee: string;
+  comments: Comment[];
 }

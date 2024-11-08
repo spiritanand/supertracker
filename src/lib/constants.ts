@@ -21,6 +21,33 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-15"),
     created: new Date("2023-11-01"),
     assignee: "john@company.com",
+    comments: [
+      {
+        id: "C001",
+        content: "Initial design mockups reviewed and approved by the UX team",
+        author: "jane@company.com",
+        created: new Date("2023-11-02"),
+      },
+      {
+        id: "C002",
+        content:
+          "Started implementation of OAuth flow with Google and GitHub providers",
+        author: "john@company.com",
+        created: new Date("2023-11-03"),
+      },
+      {
+        id: "C003",
+        content: "Need to add rate limiting to prevent brute force attacks",
+        author: "bob@company.com",
+        created: new Date("2023-11-04"),
+      },
+      {
+        id: "C004",
+        content: "Added password strength requirements and validation",
+        author: "john@company.com",
+        created: new Date("2023-11-05"),
+      },
+    ],
   },
   {
     id: "T002",
@@ -31,6 +58,39 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-11-30"),
     created: new Date("2023-11-05"),
     assignee: "jane@company.com",
+    comments: [
+      {
+        id: "C005",
+        content:
+          "Cache invalidation not working correctly for paginated responses",
+        author: "jane@company.com",
+        created: new Date("2023-11-05"),
+      },
+      {
+        id: "C006",
+        content: "Identified issue with Redis cache key generation",
+        author: "tom@company.com",
+        created: new Date("2023-11-06"),
+      },
+      {
+        id: "C007",
+        content: "Implemented new cache strategy using cache-control headers",
+        author: "jane@company.com",
+        created: new Date("2023-11-07"),
+      },
+      {
+        id: "C008",
+        content: "Added unit tests for cache middleware",
+        author: "sarah@company.com",
+        created: new Date("2023-11-08"),
+      },
+      {
+        id: "C009",
+        content: "Performance improved by 60% after fix",
+        author: "tom@company.com",
+        created: new Date("2023-11-09"),
+      },
+    ],
   },
   {
     id: "T003",
@@ -41,6 +101,38 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-31"),
     created: new Date("2023-11-10"),
     assignee: "bob@company.com",
+    comments: [
+      {
+        id: "C010",
+        content: "Created initial GitHub Actions workflow for CI",
+        author: "bob@company.com",
+        created: new Date("2023-11-10"),
+      },
+      {
+        id: "C011",
+        content: "Added AWS deployment configuration",
+        author: "bob@company.com",
+        created: new Date("2023-11-11"),
+      },
+      {
+        id: "C012",
+        content: "Need to add environment variable validation step",
+        author: "jane@company.com",
+        created: new Date("2023-11-12"),
+      },
+      {
+        id: "C013",
+        content: "Implemented Slack notifications for failed deployments",
+        author: "bob@company.com",
+        created: new Date("2023-11-13"),
+      },
+      {
+        id: "C014",
+        content: "Added database migration step to pipeline",
+        author: "tom@company.com",
+        created: new Date("2023-11-14"),
+      },
+    ],
   },
   {
     id: "T004",
@@ -51,6 +143,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-01"),
     created: new Date("2023-11-15"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T005",
@@ -61,6 +154,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-11-20"),
     created: new Date("2023-11-18"),
     assignee: "tom@company.com",
+    comments: [],
   },
   {
     id: "T006",
@@ -71,6 +165,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-10"),
     created: new Date("2023-11-22"),
     assignee: "sarah@company.com",
+    comments: [],
   },
   {
     id: "T007",
@@ -81,6 +176,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-11-30"),
     created: new Date("2023-10-15"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T008",
@@ -91,6 +187,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-01"),
     created: new Date("2023-10-20"),
     assignee: "tom@company.com",
+    comments: [],
   },
   {
     id: "T009",
@@ -101,6 +198,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-11-25"),
     created: new Date("2023-11-01"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T010",
@@ -111,6 +209,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-11-30"),
     created: new Date("2023-11-05"),
     assignee: "bob@company.com",
+    comments: [],
   },
   {
     id: "T011",
@@ -121,6 +220,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-05"),
     created: new Date("2023-11-12"),
     assignee: "sarah@company.com",
+    comments: [],
   },
   {
     id: "T012",
@@ -131,6 +231,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-15"),
     created: new Date("2023-11-08"),
     assignee: "jane@company.com",
+    comments: [],
   },
   {
     id: "T013",
@@ -141,6 +242,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-10-31"),
     created: new Date("2023-10-01"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T014",
@@ -151,6 +253,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-11-15"),
     created: new Date("2023-10-10"),
     assignee: "bob@company.com",
+    comments: [],
   },
   {
     id: "T015",
@@ -161,6 +264,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-10-20"),
     created: new Date("2023-10-05"),
     assignee: "tom@company.com",
+    comments: [],
   },
   {
     id: "T016",
@@ -171,6 +275,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-10-25"),
     created: new Date("2023-10-01"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T017",
@@ -181,6 +286,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-11-01"),
     created: new Date("2023-10-15"),
     assignee: "sarah@company.com",
+    comments: [],
   },
   {
     id: "T018",
@@ -191,6 +297,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-10-30"),
     created: new Date("2023-10-20"),
     assignee: "tom@company.com",
+    comments: [],
   },
   {
     id: "T019",
@@ -201,6 +308,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-20"),
     created: new Date("2023-12-01"),
     assignee: "mike@company.com",
+    comments: [],
   },
   {
     id: "T020",
@@ -211,6 +319,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-01-15"),
     created: new Date("2023-12-01"),
     assignee: "john@company.com",
+    comments: [],
   },
   {
     id: "T021",
@@ -221,6 +330,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-01-31"),
     created: new Date("2023-12-05"),
     assignee: "sarah@company.com",
+    comments: [],
   },
   {
     id: "T022",
@@ -231,6 +341,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-02-15"),
     created: new Date("2023-12-10"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T023",
@@ -241,6 +352,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-01-31"),
     created: new Date("2023-12-01"),
     assignee: "tom@company.com",
+    comments: [],
   },
   {
     id: "T024",
@@ -251,6 +363,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-03-01"),
     created: new Date("2023-12-15"),
     assignee: "bob@company.com",
+    comments: [],
   },
   {
     id: "T025",
@@ -261,6 +374,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2023-12-31"),
     created: new Date("2023-12-20"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T026",
@@ -271,6 +385,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-02-28"),
     created: new Date("2024-01-05"),
     assignee: "jane@company.com",
+    comments: [],
   },
   {
     id: "T027",
@@ -281,6 +396,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-03-15"),
     created: new Date("2024-01-10"),
     assignee: "tom@company.com",
+    comments: [],
   },
   {
     id: "T028",
@@ -291,6 +407,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-03-31"),
     created: new Date("2024-01-15"),
     assignee: "alice@company.com",
+    comments: [],
   },
   {
     id: "T029",
@@ -301,6 +418,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-02-15"),
     created: new Date("2024-01-01"),
     assignee: "john@company.com",
+    comments: [],
   },
   {
     id: "T030",
@@ -311,6 +429,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-03-01"),
     created: new Date("2024-01-10"),
     assignee: "sarah@company.com",
+    comments: [],
   },
   {
     id: "T031",
@@ -321,6 +440,7 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-01-15"),
     created: new Date("2024-01-05"),
     assignee: "jane@company.com",
+    comments: [],
   },
   {
     id: "T032",
@@ -331,5 +451,6 @@ export const tasks: Task[] = [
     dueDate: new Date("2024-01-31"),
     created: new Date("2024-01-10"),
     assignee: "mike@company.com",
+    comments: [],
   },
 ];
