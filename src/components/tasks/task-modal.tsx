@@ -209,7 +209,9 @@ export function TaskModal({
                             variant={
                               task.status === Status.Open
                                 ? "default"
-                                : "success"
+                                : task.status === Status.InProgress
+                                  ? "success"
+                                  : "destructive"
                             }
                           >
                             {task.status}
